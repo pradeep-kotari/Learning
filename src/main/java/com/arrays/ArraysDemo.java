@@ -4,6 +4,14 @@ import java.util.*;
 
 public class ArraysDemo {
 
+    // How to find the missing number in integer array of 1 to 100?
+
+    //This is one of the most simple array problems you will see, mostly asked in a telephonic round of Interview.
+    // You have given an integer array which contains numbers from 1 to 100 but one number is missing, you need to write a Java program to find that missing number in an array.
+    // You cannot use any open source library or Java API method which solves this problem
+
+
+
     private static int[] getArrayOfNinetyNineNumbers() {
         int[] numbers = new int[99];
         int numberToSkip = 9;
@@ -57,4 +65,5 @@ public class ArraysDemo {
         System.out.println(oneToHundred.toString());
         System.out.println("Missing Number is:" + getMissingNumber(oneToHundred));
     }
+
 }
