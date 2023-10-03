@@ -11,10 +11,8 @@ public class ArraysDemo {
     // You cannot use any open source library or Java API method which solves this problem
 
 
-
-    private static int[] getArrayOfNinetyNineNumbers() {
+    private static int[] getArrayOfNinetyNineNumbers(int numberToSkip) {
         int[] numbers = new int[99];
-        int numberToSkip = 9;
         for (int i = 0; i < numbers.length + 1; i++) {
             if (i + 1 < numberToSkip) {
                 numbers[i] = i + 1;
@@ -59,11 +57,14 @@ public class ArraysDemo {
     }
 
     public static void main(String[] args) {
-        int[] numbers = getArrayOfNinetyNineNumbers();
+        int numberToSkip = 10;
+        int[] numbers = getArrayOfNinetyNineNumbers(numberToSkip);
         getMissingNumber(numbers);
         Set<Integer> oneToHundred = getArrayOfNinetyNineRandomNumbers();
         System.out.println(oneToHundred.toString());
         System.out.println("Missing Number is:" + getMissingNumber(oneToHundred));
+        System.out.println("oneToHundred array contains 1:" + oneToHundred.contains(1));
+        System.out.println("numbers array contains " + numberToSkip + " :" + Arrays.asList(numbers).contains(numberToSkip));
     }
 
 }
