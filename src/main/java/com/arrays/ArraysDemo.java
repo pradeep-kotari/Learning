@@ -23,14 +23,14 @@ public class ArraysDemo {
         return numbers;
     }
 
-    private static Set<Integer> getArrayOfNinetyNineRandomNumbers() {
-        Set<Integer> oneToHundred = new LinkedHashSet<>();
-        while (oneToHundred.size() < 99) {
+    private static Set<Integer> getRandomNumbersWithNMissing(int origin, int bound, int n) {
+        Set<Integer> setOfNIntegers = new LinkedHashSet<>();
+        while (setOfNIntegers.size() < bound - origin - n) {
             Random random = new Random();
-            int randomInt = random.nextInt(1, 101);
-            oneToHundred.add(randomInt);
+            int randomInt = random.nextInt(origin,bound);
+            setOfNIntegers.add(randomInt);
         }
-        return oneToHundred;
+        return setOfNIntegers;
     }
 
     private static int getMissingNumber(int[] numbers) {
@@ -44,7 +44,7 @@ public class ArraysDemo {
         return -1;
     }
 
-    private static int getMissingNumber(Set<Integer> oneToHundred) {
+    private static Set<Integer> getMissingNumbers(Set<Integer> oneToHundred) {
         Set<Integer> seqNumbers = new HashSet<>();
         for (int i = 1; i <= 100; i++) {
             seqNumbers.add(i);
@@ -53,18 +53,28 @@ public class ArraysDemo {
             seqNumbers.remove(i);
         }
 
-        return seqNumbers.stream().findFirst().get();
+        return seqNumbers;
     }
 
     public static void main(String[] args) {
         int numberToSkip = 10;
         int[] numbers = getArrayOfNinetyNineNumbers(numberToSkip);
         getMissingNumber(numbers);
-        Set<Integer> oneToHundred = getArrayOfNinetyNineRandomNumbers();
+        Set<Integer> oneToHundred = getRandomNumbersWithNMissing(1,101,2);
         System.out.println(oneToHundred.toString());
-        System.out.println("Missing Number is:" + getMissingNumber(oneToHundred));
+        System.out.println("Missing Number is:" + getMissingNumbers(oneToHundred).stream().findFirst().get());
         System.out.println("oneToHundred array contains 1:" + oneToHundred.contains(1));
         System.out.println("numbers array contains " + numberToSkip + " :" + Arrays.asList(numbers).contains(numberToSkip));
+        System.out.println(Arrays.toString(new ArraysCustom().getSmallestAndLargestIntegerFromArray(numbers)));
+
+        Set<Integer> set = getRandomNumbersWithNMissing(10,65,2);
+        int[] oneToHundredArr = new int[set.size()];
+        int i = 0;
+        for (int number : set) {
+            oneToHundredArr[i] = number;
+            i++;
+        }
+        System.out.println(Arrays.toString(new ArraysCustom().getSmallestAndLargestIntegerFromArray(oneToHundredArr)));
     }
 
 }
