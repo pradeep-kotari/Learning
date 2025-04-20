@@ -414,9 +414,9 @@
 </ul>
 <p><strong>Certification:</strong> FinTech Engineer – Java Track</p>
 <hr>
-<h3 id="🏅-certification-format-applicable-to-all-tracks">🏅 Certification Format (Applicable to All Tracks)</h3>
+<h3 id="certification-format-applicable-to-all-tracks">Certification Format (Applicable to All Tracks)</h3>
 <p>Each certification path follows a rigorous and outcome-driven process to ensure job readiness and demonstrable skill development.</p>
-<h4 id="✅-evaluation-criteria">✅ Evaluation Criteria:</h4>
+<h4 id="evaluation-criteria">Evaluation Criteria:</h4>
 <ul>
 <li>
 <p><strong>Weekly Assignments:</strong> Hands-on coding tasks submitted via GitHub or Google Classroom</p>
@@ -455,7 +455,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="🧾-certificate-includes">🧾 Certificate Includes:</h4>
+<h4 id="certificate-includes">Certificate Includes:</h4>
 <ul>
 <li>
 <p>Student’s full name</p>
@@ -479,7 +479,7 @@
 <p>Verifiable link (via Google Classroom or Credly)</p>
 </li>
 </ul>
-<h4 id="🔒-verification">🔒 Verification:</h4>
+<h4 id="verification">Verification:</h4>
 <ul>
 <li>
 <p>Unique certificate ID</p>
