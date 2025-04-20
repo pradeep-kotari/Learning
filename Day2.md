@@ -95,5 +95,5 @@ If you show up consistently, <strong>your work will speak louder than your degre
 <p><strong>Let’s go.</strong></p>
 <p>Pradeep Kumar Kotari<br>
 Co-Founder,<br>
-Learners Cohort</p>
+<strong>Learners Cohort</strong></p>
 
