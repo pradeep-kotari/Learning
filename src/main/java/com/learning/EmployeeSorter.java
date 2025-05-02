@@ -29,16 +29,16 @@ public class EmployeeSorter {
 
     private static List<Employee> getEmployees() {
         List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee(6, "Yash", "Chopra", BigDecimal.valueOf(100000), 25));
-        employees.add(new Employee(2, "Aman", "Sharma", BigDecimal.valueOf(200000), 28));
-        employees.add(new Employee(3, "Aakash", "Yaadav", BigDecimal.valueOf(120000), 52));
-        employees.add(new Employee(5, "David", "Kameron", BigDecimal.valueOf(78000), 19));
-        employees.add(new Employee(4, "James", "Hedge", BigDecimal.valueOf(250000), 62));
-        employees.add(new Employee(8, "Balaji", "Subbu", BigDecimal.valueOf(95000), 22));
-        employees.add(new Employee(7, "Karan", "Johar", BigDecimal.valueOf(300000), 59));
-        employees.add(new Employee(1, "Lokesh", "Gupta", BigDecimal.valueOf(130000), 32));
-        employees.add(new Employee(9, "Vishu", "Bissi", BigDecimal.valueOf(140000), 33));
-        employees.add(new Employee(10, "Lokesh", "Ramachandran", BigDecimal.valueOf(500000), 41));
+        employees.add(new Employee(6, "Yash", "Chopra", BigDecimal.valueOf(100000), 25, new Date()));
+        employees.add(new Employee(2, "Aman", "Sharma", BigDecimal.valueOf(200000), 28, null));
+        employees.add(new Employee(3, "Aakash", "Yaadav", BigDecimal.valueOf(120000), 52, null));
+        employees.add(new Employee(5, "David", "Kameron", BigDecimal.valueOf(78000), 19, null));
+        employees.add(new Employee(4, "James", "Hedge", BigDecimal.valueOf(250000), 62, new Date()));
+        employees.add(new Employee(8, "Balaji", "Subbu", BigDecimal.valueOf(95000), 22, null));
+        employees.add(new Employee(7, "Karan", "Johar", BigDecimal.valueOf(300000), 59, null));
+        employees.add(new Employee(1, "Lokesh", "Gupta", BigDecimal.valueOf(130000), 32, null));
+        employees.add(new Employee(9, "Vishu", "Bissi", BigDecimal.valueOf(140000), 33, null));
+        employees.add(new Employee(10, "Lokesh", "Ramachandran", BigDecimal.valueOf(500000), 41, null));
         return employees;
     }
 }

@@ -1,6 +1,7 @@
 package com.learning;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Objects;
 
 public class Employee {
@@ -11,12 +12,16 @@ public class Employee {
     private BigDecimal salary;
     private Integer age;
 
-    public Employee(Integer id, String firstName, String lastName, BigDecimal salary, Integer age) {
+    private Date dateOfBirth;
+    public static final String COMPANY_NAME = "Hexaware Technologies";
+
+    public Employee(Integer id, String firstName, String lastName, BigDecimal salary, Integer age, Date dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.age = age;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Integer getId() {
@@ -59,28 +64,35 @@ public class Employee {
         this.age = age;
     }
 
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(id, employee.id) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(salary, employee.salary) && Objects.equals(age, employee.age);
+        return Objects.equals(id, employee.id) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(salary, employee.salary) && Objects.equals(age, employee.age) && Objects.equals(dateOfBirth, employee.dateOfBirth);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, salary, age);
+        return Objects.hash(id, firstName, lastName, salary, age, dateOfBirth);
     }
 
     @Override
     public String toString() {
-
         return "Employee{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
                 ", age=" + age +
+                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 }
